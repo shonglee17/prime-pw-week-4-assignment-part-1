@@ -59,29 +59,44 @@ console.log( '-3 - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 let item = [];
-
 function returnLast(){
   console.log( 'in returnLast');
-  return item[item.length - 1]
-}
-console.log();
+  return item[item.length - 1]  
+
+}//end returnLast
+console.log('return last item of whatever I push:', returnLast(item.push('1','2','3') ) );
 
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
-}
-
+let array = [1,2,3]
+function find( value , array ){
+  for(i=0; i<array.length; i++){
+    if ( value === array[i]){
+      console.log('this value is in the array:', value)
+      return true;
+    }//end if
+  }//end for
+  console.log('this value is not in the array:', value)
+  return false;
+}//end function
+console.log(find(1, array) )
+console.log(find(2, array) )
+console.log(find(3, array) )
+console.log(find(4, array) )
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+let string = 'apple'
 function isFirstLetter(letter, string) {
+  string.startsWith("a",1);
+}//end function
+console.log('testing;', isFirstLetter("a", string) )
 
-}
+
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
