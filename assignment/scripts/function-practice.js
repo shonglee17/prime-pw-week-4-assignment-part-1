@@ -81,32 +81,32 @@ function find( value , array ){
   console.log('this value is not in the array:', value)
   return false;
 }//end function
-console.log(find(1, array) )
-console.log(find(2, array) )
 console.log(find(3, array) )
-console.log(find(4, array) )
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-let string = 'apple'
-function isFirstLetter(letter, string) {
-  string.startsWith("a",1);
+function isFirstLetter(letter , string){ 
+  console.log('in isFirstLetter')
+  return string.startsWith(letter)
+  
 }//end function
-console.log('testing;', isFirstLetter("a", string) )
+console.log(isFirstLetter( 'a', 'apple') );
 
 
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+let numbers = [1,2,3]
+function sumAll() {
   let sum = 0
+  for (i=0; i<numbers.length ; i++)
   // TODO: loop to add items
-  return sum;
+  return sum + numbers[i];
 }
-
+console.log('test;', sumAll(numbers.push[4]) )
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
